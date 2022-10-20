@@ -7,7 +7,7 @@ export const About = () => {
          * TODO: 装飾
          */
        }
-      About
+      About --
     </div>
   )
 }
