@@ -15,7 +15,7 @@ export const get = async (path: string): Promise<any> => {
 
     // エラーは全てここで握り呼び出し元には返しません。
     }).catch(error => {
-      // TODO: 共通のエラー処理実装。
+// ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/44
       alert(error)
     })
 }

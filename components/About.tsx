@@ -2,10 +2,8 @@ export const About = () => {
   return(
     <div>
       {
-        /*
-         * TODO: 文言
-         * TODO: 装飾
-         */
+// ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/39
+// ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/40
        }
       About --
     </div>
