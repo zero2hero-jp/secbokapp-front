@@ -15,7 +15,7 @@ export const get = async (path: string): Promise<any> => {
 
     // エラーはここで共通化。握り呼び出し元には返しません。
     }).catch(error => {
-      // ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/44
+// AT_SEE: https://github.com/zero2hero-jp/secbokapp-front/issues/44
       alert(error)
     })
 }

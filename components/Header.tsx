@@ -14,7 +14,7 @@ type HeaderProps = {
 
 export const Header = ({setChildren}: HeaderProps) => {
   return(
-    // AT_SEE: https://github.com/zero2hero-jp/secbokapp-front/issues/43
+// AT_SEE: https://github.com/zero2hero-jp/secbokapp-front/issues/43
     <div>
       <ul>
         <li><a href="#" onClick={()=>{setChildren(<Index setChildren={setChildren} />)}}>Index</a></li>

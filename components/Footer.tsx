@@ -1,6 +1,6 @@
 export const Footer = () => {
   return(
-    // TODO: 装飾
+// ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/42
     <></>
   )
 }
