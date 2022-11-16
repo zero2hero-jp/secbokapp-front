@@ -7,7 +7,12 @@ npm run dev
 yarn dev
 ```
 
-2. .evn.developmentを作成して以下の行を追加。
+2. .env.developmentを作成して以下の行を追加。
 ```
 NEXT_PUBLIC_API_ENDPOINT_URL=http://localhost:3000
+```
+
+3. 起動
+```
+npm run dev
 ```
