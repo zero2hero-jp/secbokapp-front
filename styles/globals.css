@@ -32,3 +32,7 @@ li {
     background: black;
   }
 }
+
+.header-button {
+  @apply bg-gray-200 rounded-full p-[6px];
+}
