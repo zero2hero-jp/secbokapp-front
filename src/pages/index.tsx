@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { ReactElement, useState } from 'react';
 
-import { Layout } from '@Components/Layout';
+import { Layout } from '@Components/ui/Layout';
 import { About } from '@Components/About';
 
 const Home: NextPage = () => {

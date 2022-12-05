@@ -28,6 +28,12 @@
       ],
       "@Pages/*": [
         "./src/pages/*"
+      ],
+      "@Types/*": [
+        "./types/*"
+      ],
+      "@Utils/*": [
+        "./utils/*"
       ]
     }
   },

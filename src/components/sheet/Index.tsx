@@ -6,9 +6,9 @@ import React, {
   SetStateAction,
 } from 'react';
 
-import { SheetType } from 'types/SheetType';
-import { get } from 'utils/FetchQuery';
-import { Show } from 'src/components/sheet/Show';
+import { get } from '@Utils/FetchQuery';
+import { Show } from '@Components/sheet/Show';
+import { SheetType } from '@Types/SheetType';
 
 type IndexProps = {
   setChildren: Dispatch<SetStateAction<ReactElement>>;
