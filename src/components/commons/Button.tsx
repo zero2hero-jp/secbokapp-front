@@ -4,5 +4,9 @@ type ButtonProps = {
   className: string;
 };
 export const Button = ({ children, className }: ButtonProps) => {
-  return <button className={className}>{children}</button>;
+  return (
+    <>
+      <button className={className}>{children}</button>
+    </>
+  );
 };
