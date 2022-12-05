@@ -18,16 +18,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
       "@Commons/*": [
-        "./components/commons/*",
+        "./src/components/commons/*",
       ],
       "@Components/*": [
-        "./components/*"
+        "./src/components/*"
       ],
       "@Pages/*": [
-        "./pages/*"
+        "./src/pages/*"
       ]
     }
   },
