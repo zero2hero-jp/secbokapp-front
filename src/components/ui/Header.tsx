@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { ReactElement, Dispatch, SetStateAction } from 'react';
 
-import { Index } from 'src/components/sheet/Index';
-import { About } from 'src/components/About';
-import { SVG } from './commons/SVG';
-import { Button } from './commons/Button';
-import { Logo } from './Logo';
+import { Index } from '@Components/sheet/Index';
+import { About } from '@Components/About';
+import { SVG } from '@Commons/SVG';
+import { Button } from '@Commons/Button';
+import { Logo } from '../Logo';
 
 type HeaderProps = {
   setChildren: Dispatch<SetStateAction<ReactElement>>;

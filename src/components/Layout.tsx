@@ -1,7 +1,7 @@
 import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 
-import { Header } from 'src/components/Header';
-import { Footer } from 'src/components/Footer';
+import { Header } from '@Components/ui/Header';
+import { Footer } from '@Components/ui/Footer';
 
 type LayoutProps = {
   children: ReactElement;

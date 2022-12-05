@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from './commons/Button';
-import { SVG } from './commons/SVG';
+import { Button } from '@Commons/Button';
+import { SVG } from '@Commons/SVG';
 
 export const Logo = () => {
   return (

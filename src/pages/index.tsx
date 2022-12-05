@@ -3,8 +3,8 @@ import Head from 'next/head';
 
 import { ReactElement, useState } from 'react';
 
-import { Layout } from 'src/components/Layout';
-import { About } from 'src/components/About';
+import { Layout } from '@Components/Layout';
+import { About } from '@Components/About';
 
 const Home: NextPage = () => {
   const [children, setChildren] = useState<ReactElement>(<About />);
