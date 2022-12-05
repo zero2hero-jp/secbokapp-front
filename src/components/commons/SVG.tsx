@@ -13,11 +13,11 @@ export const SVG = ({ d, strokeWidth, stroke, className }: SVGProps) => {
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
         viewBox='0 0 24 24'
-        stroke-width={strokeWidth}
+        strokeWidth={strokeWidth}
         stroke={stroke}
         className={className}
       >
-        <path stroke-linecap='round' stroke-linejoin='round' d={d} />
+        <path strokeLinecap='round' strokeLinejoin='round' d={d} />
       </svg>
     </>
   );
