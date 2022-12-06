@@ -45,10 +45,14 @@ li {
   @apply bg-gray-200 rounded-full p-[6px];
 }
 
-.header-icon {
+.icon-3 {
+  @apply h-3 w-3;
+}
+
+.icon-4 {
   @apply w-4 h-4;
 }
 
-.icon-s {
-  @apply h-3 w-3;
+.icon-5 {
+  @apply w-5 h-5;
 }
