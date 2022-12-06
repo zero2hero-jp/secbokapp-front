@@ -5,9 +5,11 @@ import { ReactElement, useState } from 'react';
 
 import { Layout } from '@Components/ui/Layout';
 import { About } from '@Components/About';
+import { Main } from '@Components/ui/Main';
 
 const Home: NextPage = () => {
-  const [children, setChildren] = useState<ReactElement>(<About />);
+  // const [children, setChildren] = useState<ReactElement>(<About />);
+  const [children, setChildren] = useState<ReactElement>(<Main />);
 
   return (
     <>
