@@ -1,7 +1,8 @@
 import { SVG } from '@Commons/SVG';
 import React from 'react';
 import { ListItem } from './ListItem';
-
+import { BeakerIcon } from '@heroicons/react/24/solid';
+import { InboxArrowDownIcon } from '@heroicons/react/20/solid';
 export const SideBar = () => {
   return (
     <aside className='sidebar'>

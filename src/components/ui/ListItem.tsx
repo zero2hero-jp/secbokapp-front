@@ -1,34 +1,39 @@
 import { SVG } from '@Commons/SVG';
+import { InboxArrowDownIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 
 type SidebarIcons = {
-  name: string;
-  d: string;
   title: string;
+  icon: JSX.Element;
 }[];
 
+const size = 'icon-7';
 const sidebarIcons: SidebarIcons = [
   {
-    name: 'dashboard',
-    d: 'M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z',
+    icon: <UserCircleIcon className={size} />,
     title: 'Dashboard',
+  },
+  {
+    icon: <InboxArrowDownIcon className={size} />,
+    title: 'Inbox',
   },
 ];
 
 export const ListItem = () => {
   return (
     <>
-      {sidebarIcons.map((item) => {
-        <ul className='sidebar-list-item'>
+      {sidebarIcons.map((item) => (
+        <ul className='sidebar-list-item' key={item.title}>
           <li>
             <ul className='sidebar-list-item-title'>
-              <li className='sidebar-main-icon-wrapper'>
-                <SVG
-                  variant='solid'
-                  name={item.name}
-                  dWithRule={item.d}
-                  className='icon-6'
-                />
+              <li
+                className={`${
+                  item.title === 'Dashboard'
+                    ? 'sidebar-main-icon-wrapper'
+                    : 'sidebar-icon-wrapper'
+                }`}
+              >
+                {item.icon}
               </li>
               <li className='sidebar-list-item-text'>{item.title}</li>
             </ul>
@@ -44,8 +49,8 @@ export const ListItem = () => {
             />
           </li>
           {/* TODO:ここにドロップダウンメニューがはいります */}
-        </ul>;
-      })}
+        </ul>
+      ))}
     </>
   );
 };
