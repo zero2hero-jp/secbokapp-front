@@ -3,8 +3,8 @@ import React from 'react';
 type SVGProps =
   | {
       variant: 'solid';
-      dWithRule: string /* filRuleがある方のpathのd */;
-      d?: string /* filRuleがない方のpathのd */;
+      dWithRule: string /* fillRuleがある方のpathのd */;
+      d?: string /* fillRuleがない方のpathのd */;
       className: string;
       name: string /* 他のアイコンと区別するための名前 */;
     }

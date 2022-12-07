@@ -56,3 +56,43 @@ li {
 .icon-5 {
   @apply w-5 h-5;
 }
+
+.icon-6 {
+  @apply w-6 h-6;
+}
+
+.icon-7 {
+  @apply w-7 h-7;
+}
+
+.icon-8 {
+  @apply w-8 h-8;
+}
+
+.sidebar {
+  @apply md:w-0 lg:w-20 xl:w-64 bg-gray-500 h-screen lg:p-4;
+}
+
+.sidebar-list-item-wrapper {
+  @apply flex flex-col items-center;
+}
+
+.sidebar-list-item {
+  @apply w-[200px] p-4 flex items-center justify-between;
+}
+
+.sidebar-list-item-title {
+  @apply flex items-center gap-x-2;
+}
+
+.sidebar-icon-wrapper {
+  @apply sr-only md:not-sr-only flex justify-center xl:justify-start text-gray-200;
+}
+
+.sidebar-list-item-text {
+  @apply text-gray-200;
+}
+
+.sidebar-icon-open-close {
+  @apply text-gray-200 flex items-center;
+}
