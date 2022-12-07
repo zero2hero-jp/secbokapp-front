@@ -70,29 +70,37 @@ li {
 }
 
 .sidebar {
-  @apply md:w-0 lg:w-20 xl:w-64 bg-gray-500 h-screen lg:p-4;
+  @apply md:w-0 lg:w-20 xl:w-64 bg-slate-800 h-screen lg:p-4 flex justify-center;
 }
 
 .sidebar-list-item-wrapper {
-  @apply flex flex-col items-center;
+  @apply flex flex-col gap-y-2;
 }
 
 .sidebar-list-item {
-  @apply w-[200px] p-4 flex items-center justify-between;
+  @apply xl:w-[200px] p-4 flex items-center justify-between;
 }
 
 .sidebar-list-item-title {
-  @apply flex items-center gap-x-2;
+  @apply flex items-center gap-x-2 relative;
+}
+
+.sidebar-icon-wrapper-base {
+  @apply flex xl:justify-start text-indigo-500 sr-only md:not-sr-only;
+}
+
+.sidebar-main-icon-wrapper {
+  @apply sidebar-icon-wrapper-base text-indigo-500;
 }
 
 .sidebar-icon-wrapper {
-  @apply sr-only md:not-sr-only flex justify-center xl:justify-start text-gray-200;
+  @apply sidebar-icon-wrapper-base text-slate-400;
 }
 
 .sidebar-list-item-text {
-  @apply text-gray-200;
+  @apply text-slate-200 text-sm sr-only xl:not-sr-only;
 }
 
 .sidebar-icon-open-close {
-  @apply text-gray-200 flex items-center;
+  @apply text-slate-400 flex items-center sr-only xl:not-sr-only;
 }
