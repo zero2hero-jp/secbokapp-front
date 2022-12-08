@@ -2,7 +2,7 @@ import React, { ReactElement, Dispatch, SetStateAction } from 'react';
 
 import { Header } from '@Components/ui/Header';
 import { Footer } from '@Components/ui/Footer';
-import { SideBar } from './SideBar';
+import { SideBar } from './sidebar/SideBar';
 
 type LayoutProps = {
   children: ReactElement;

@@ -23,7 +23,7 @@ export const Header = ({ setChildren }: HeaderProps) => {
       <header className='header-wrapper'>
         <div className='header-contents'>
           <div>
-            <Button className='header-button'>
+            <Button className='header-button' type='button'>
               <SVG
                 variant='outline'
                 name='search'
@@ -35,7 +35,7 @@ export const Header = ({ setChildren }: HeaderProps) => {
             </Button>
           </div>
           <div>
-            <Button className='header-button'>
+            <Button className='header-button' type='button'>
               <SVG
                 variant='outline'
                 name='chat-bubble'
@@ -47,7 +47,7 @@ export const Header = ({ setChildren }: HeaderProps) => {
             </Button>
           </div>
           <div>
-            <Button className='header-button'>
+            <Button className='header-button' type='button'>
               <SVG
                 variant='outline'
                 name='exclamation'
@@ -61,7 +61,7 @@ export const Header = ({ setChildren }: HeaderProps) => {
           <div className='border-r-[1px] h-6 border-gray-200'></div>
           <Logo />
           <div>
-            <Button className='flex items-center'>
+            <Button className='flex items-center' type='button'>
               <SVG
                 variant='outline'
                 name='arrow-bottom'
