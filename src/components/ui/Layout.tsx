@@ -1,4 +1,4 @@
-import React, { ReactElement, Dispatch, SetStateAction } from 'react';
+import React, { ReactElement, Dispatch, SetStateAction, useState } from 'react';
 
 import { Header } from '@Components/ui/Header';
 import { Footer } from '@Components/ui/Footer';
@@ -10,11 +10,17 @@ type LayoutProps = {
 };
 
 export const Layout = ({ children, setChildren }: LayoutProps) => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleCallSidebar = () => {
+    setIsClicked(!isClicked);
+  };
+
   return (
-    <div className='flex'>
-      <SideBar />
+    <div className='flex relative md:static'>
+      <SideBar isClicked={isClicked} onClick={handleCallSidebar} />
       <div className='flex flex-col'>
-        <Header setChildren={setChildren} />
+        <Header setChildren={setChildren} onClick={handleCallSidebar} />
         {children}
         <Footer />
       </div>

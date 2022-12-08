@@ -58,11 +58,11 @@ li {
 }
 
 .header-wrapper {
-  @apply flex h-16 justify-between py-4 px-6 shadow-sm shadow-slate-100;
+  @apply flex h-16 justify-between lg:justify-end py-4 px-6 shadow-sm shadow-slate-100 w-screen flex-1;
 }
 
 .header-menu {
-  @apply flex items-center;
+  @apply flex items-center not-sr-only lg:sr-only;
 }
 
 .header-menu-button {
@@ -109,6 +109,30 @@ li {
   @apply sidebar-icon-wrapper-base text-indigo-500 mb-10 flex items-start pl-3;
 }
 
+.sidebar-clicked {
+  @apply not-sr-only absolute z-20 lg:static;
+}
+
+.sidebar-contents-clicked {
+  @apply w-64 bg-slate-800 h-screen p-4 flex ease-out duration-200 flex-col relative;
+}
+
+.sidebar-list-item-wrapper-clicked {
+  @apply flex flex-col gap-y-4 items-center;
+}
+
+.sidebar-close-icon-wrapper-clicked {
+  @apply sidebar-icon-wrapper-base text-slate-400 mb-10 flex items-start pl-3 not-sr-only lg:sr-only;
+}
+
+.sidebar-home-icon-wrapper-clicked {
+  @apply sidebar-icon-wrapper-base text-indigo-500 mb-10 flex items-start pl-3;
+}
+
+.sidebar-list-item-clicked {
+  @apply w-[200px] flex items-center justify-between;
+}
+
 .sidebar-main-icon-wrapper {
   @apply sidebar-icon-wrapper-base text-indigo-500;
 }
@@ -118,9 +142,9 @@ li {
 }
 
 .sidebar-list-item-text {
-  @apply text-slate-200 text-sm sr-only lg:not-sr-only;
+  @apply text-slate-200 text-sm;
 }
 
 .sidebar-icon-open-close {
-  @apply text-slate-400 flex items-center sr-only lg:not-sr-only;
+  @apply text-slate-400 flex items-center;
 }

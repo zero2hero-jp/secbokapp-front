@@ -1,23 +1,25 @@
 import Link from 'next/link';
-import { ReactElement, Dispatch, SetStateAction } from 'react';
+import {
+  ReactElement,
+  Dispatch,
+  SetStateAction,
+  useState,
+  useEffect,
+} from 'react';
 
 import { Index } from '@Components/sheet/Index';
 import { About } from '@Components/About';
 import { SVG } from '@Commons/SVG';
 import { Button } from '@Commons/Button';
 import { Logo } from '../Logo';
-import {
-  Bars2Icon,
-  Bars3BottomLeftIcon,
-  Bars3CenterLeftIcon,
-  Bars3Icon,
-} from '@heroicons/react/24/outline';
+import { Bars3BottomLeftIcon } from '@heroicons/react/24/outline';
 
 type HeaderProps = {
   setChildren: Dispatch<SetStateAction<ReactElement>>;
+  onClick: () => void;
 };
 
-export const Header = ({ setChildren }: HeaderProps) => {
+export const Header = ({ setChildren, onClick }: HeaderProps) => {
   return (
     // AT_SEE: https://github.com/zero2hero-jp/secbokapp-front/issues/43
     <div>
@@ -26,9 +28,13 @@ export const Header = ({ setChildren }: HeaderProps) => {
         <li><a href="#" onClick={()=>{setChildren(<Index setChildren={setChildren} />)}}>Index</a></li>
         <li><a href="#" onClick={()=>{setChildren(<About />)}}>About</a></li>
       </ul> */}
-      <header className='header-wrapper lg:w-[calc(100vw-256px)] w-screen'>
+      <header className='header-wrapper lg:w-[calc(100vw-256px)]'>
         <div className='header-menu'>
-          <Button className='header-menu-button' type='button'>
+          <Button
+            className='header-menu-button'
+            type='button'
+            onClick={onClick}
+          >
             <Bars3BottomLeftIcon className='icon-6' />
           </Button>
         </div>

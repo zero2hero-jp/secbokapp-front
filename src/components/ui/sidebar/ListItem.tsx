@@ -18,12 +18,19 @@ const sidebarIcons: SidebarIcons = [
     title: 'Inbox',
   },
 ];
-
-export const ListItem = () => {
+type ListITemProps = {
+  isClicked: boolean;
+};
+export const ListItem = ({ isClicked }: ListITemProps) => {
   return (
     <>
       {sidebarIcons.map((item) => (
-        <ul className='sidebar-list-item' key={item.title}>
+        <ul
+          className={`${
+            isClicked ? 'sidebar-list-item-clicked' : 'sidebar-list-item'
+          }`}
+          key={item.title}
+        >
           <li>
             <ul className='sidebar-list-item-title'>
               <li
