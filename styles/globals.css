@@ -58,10 +58,18 @@ li {
 }
 
 .header-wrapper {
-  @apply flex h-16 w-full justify-end py-4 px-6;
+  @apply flex h-16 justify-between py-4 px-6 shadow-sm shadow-slate-100;
 }
 
-.header-contents {
+.header-menu {
+  @apply flex items-center;
+}
+
+.header-menu-button {
+  @apply text-slate-500 font-medium;
+}
+
+.header-navigation {
   @apply flex gap-x-3 items-center;
 }
 
