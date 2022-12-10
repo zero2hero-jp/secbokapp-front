@@ -8,13 +8,14 @@ type SideBarProps = {
   isClicked: boolean;
   onClick: () => void;
 };
+
 export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
   return (
     <>
       {isClicked ? (
         <aside className='sidebar-clicked'>
           <div className='sidebar-contents-clicked'>
-            <div className='flex justify-between lg:justify-start w-[200px] lg:w-full'>
+            <div className='sidebar-hamburger-menu-close-group'>
               <Button
                 className='sidebar-close-icon-wrapper-clicked'
                 type='button'
@@ -25,6 +26,7 @@ export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
               <Button
                 className='sidebar-home-icon-wrapper-clicked'
                 type='button'
+                /* onClick={homeへ遷移} */
               >
                 <HomeIcon className='icon-8' />
               </Button>

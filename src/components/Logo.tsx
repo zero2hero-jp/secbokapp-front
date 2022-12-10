@@ -6,7 +6,7 @@ export const Logo = () => {
   return (
     <>
       <div>
-        <Button className='header-button'>
+        <Button className='header-button' type='button'>
           <SVG
             variant='outline'
             name='paper-airplane'

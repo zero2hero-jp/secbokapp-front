@@ -55,7 +55,7 @@ export const ListItem = ({ isClicked }: ListITemProps) => {
               stroke='currentColor'
             />
           </li>
-          {/* TODO:ここにドロップダウンメニューがはいります */}
+          {/* TODO:ここにアコーディオンメニューがはいります */}
         </ul>
       ))}
     </>
