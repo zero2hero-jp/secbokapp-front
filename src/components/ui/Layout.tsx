@@ -3,6 +3,7 @@ import React, { ReactElement, Dispatch, SetStateAction, useState } from 'react';
 import { Header } from '@Components/ui/Header';
 import { Footer } from '@Components/ui/Footer';
 import { SideBar } from './sidebar/SideBar';
+import { useToggle } from '@Commons/hooks/useToggle';
 
 type LayoutProps = {
   children: ReactElement;
@@ -10,17 +11,15 @@ type LayoutProps = {
 };
 
 export const Layout = ({ children, setChildren }: LayoutProps) => {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleCallSidebar = () => {
-    setIsClicked(!isClicked);
-  };
+  const [isClicked, { on, off }] = useToggle();
+  console.log('Layout', isClicked);
 
   return (
     <div className='flex relative md:static'>
-      <SideBar isClicked={isClicked} onClick={handleCallSidebar} />
+      <SideBar isClicked={isClicked} onClick={off} />
+
       <div className='flex flex-col'>
-        <Header setChildren={setChildren} onClick={handleCallSidebar} />
+        <Header setChildren={setChildren} onClick={on} />
         {children}
         <Footer />
       </div>

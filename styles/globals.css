@@ -58,7 +58,7 @@ li {
 }
 
 .header-wrapper {
-  @apply flex h-16 justify-between lg:justify-end py-4 px-6 shadow-sm shadow-slate-100 w-screen flex-1;
+  @apply flex h-16 justify-between lg:justify-end py-4 px-4 shadow-sm shadow-slate-100 w-screen;
 }
 
 .header-menu {
@@ -70,7 +70,7 @@ li {
 }
 
 .header-navigation {
-  @apply flex gap-x-3 items-center;
+  @apply flex gap-x-2 items-center;
 }
 
 .header-button {
@@ -129,6 +129,9 @@ li {
   @apply sidebar-icon-wrapper-base text-indigo-500 mb-10 flex items-start pl-3;
 }
 
+.sidebar-hamburger-menu-close-group {
+  @apply flex justify-between lg:justify-start w-[200px] lg:w-full;
+}
 .sidebar-list-item-clicked {
   @apply w-[200px] flex items-center justify-between;
 }
@@ -147,4 +150,8 @@ li {
 
 .sidebar-icon-open-close {
   @apply text-slate-400 flex items-center;
+}
+
+.announce {
+  @apply bg-indigo-100 py-4 px-6 text-xl mb-6;
 }
