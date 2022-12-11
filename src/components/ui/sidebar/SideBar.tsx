@@ -33,7 +33,7 @@ export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
             </div>
             <p className='sidebar-list-main-title'>Pages</p>
             <div className='sidebar-list-item-wrapper-clicked'>
-              <ListItem isClicked={isClicked} />
+              <ListItem isClicked />
             </div>
           </div>
         </aside>
@@ -45,7 +45,7 @@ export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
             </Button>
             <p className='sidebar-list-main-title'>Pages</p>
             <div className='sidebar-list-item-wrapper'>
-              <ListItem isClicked={isClicked} />
+              <ListItem isClicked />
             </div>
           </div>
         </aside>

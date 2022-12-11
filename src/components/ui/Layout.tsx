@@ -12,14 +12,14 @@ type LayoutProps = {
 
 export const Layout = ({ children, setChildren }: LayoutProps) => {
   const [isClicked, { on, off }] = useToggle();
-  console.log('Layout', isClicked);
 
   return (
     <div className='flex relative md:static'>
+      {/* sidebarのトグルをoffにしたら useToggleから toOff が falseになりsideBarに流れてくる */}
       <SideBar isClicked={isClicked} onClick={off} />
 
       <div className='flex flex-col'>
-        <Header setChildren={setChildren} onClick={on} />
+        <Header setChildren={setChildren} isClicked onClick={on} />
         {children}
         <Footer />
       </div>

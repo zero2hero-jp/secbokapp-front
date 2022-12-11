@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ReactElement, Dispatch, SetStateAction } from 'react';
 
 import { Index } from '@Components/sheet/Index';
-import { About } from '@Components/About';
+import { About } from '@Pages/About';
 import { SVG } from '@Commons/SVG';
 import { Button } from '@Commons/Button';
 import { Logo } from '../Logo';
@@ -10,6 +10,8 @@ import { Bars3BottomLeftIcon } from '@heroicons/react/24/outline';
 
 type HeaderProps = {
   setChildren: Dispatch<SetStateAction<ReactElement>>;
+  // toOn: boolean;
+  isClicked: boolean;
   onClick: () => void;
 };
 
