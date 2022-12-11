@@ -10,7 +10,6 @@ import { Bars3BottomLeftIcon } from '@heroicons/react/24/outline';
 
 type HeaderProps = {
   setChildren: Dispatch<SetStateAction<ReactElement>>;
-  // toOn: boolean;
   isClicked: boolean;
   onClick: () => void;
 };
