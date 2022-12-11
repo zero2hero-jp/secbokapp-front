@@ -63,9 +63,7 @@ export const ListItem = ({ isClicked }: ListITemProps) => {
               </li>
               <li className='sidebar-list-item-text'>
                 {item.arrowDirection === 'right' ? (
-                  <Link href={item.href}>
-                    <a>{item.title}</a>
-                  </Link>
+                  <Link href={item.href}>{item.title}</Link>
                 ) : (
                   item.title
                 )}

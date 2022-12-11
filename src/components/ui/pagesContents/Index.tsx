@@ -23,7 +23,7 @@ export const Index = () => {
   ];
 
   return (
-    <main className='px-4 md:px-4 lg:px-8 pt-6'>
+    <>
       <Box className='announce'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Box>
@@ -56,7 +56,7 @@ export const Index = () => {
           </Grid>
         </>
       ))}
-    </main>
+    </>
   );
 };
 

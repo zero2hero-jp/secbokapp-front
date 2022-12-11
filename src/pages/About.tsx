@@ -1,5 +1,5 @@
 import { Layout } from '@Components/ui/layouts/Layout';
-import { About } from '@Components/ui/pages/About';
+import { About } from '@Components/ui/pagesContents/About';
 
 const about = () => {
   return (

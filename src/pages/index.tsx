@@ -6,7 +6,7 @@ import { ReactElement, useState } from 'react';
 import { Layout } from '@Components/ui/layouts/Layout';
 // import { About } from '@Pages/about';
 // import { Main } from '@Components/ui/Main';
-import { Index } from '@Components/ui/pages/Index';
+import { Index } from '@Components/ui/pagesContents/Index';
 
 const Home: NextPage = () => {
   // const [children, setChildren] = useState<ReactElement>(<About />);
