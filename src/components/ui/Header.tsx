@@ -2,19 +2,19 @@ import Link from 'next/link';
 import { ReactElement, Dispatch, SetStateAction } from 'react';
 
 import { Index } from '@Components/sheet/Index';
-import { About } from '@Pages/About';
+// import { about } from '@Pages/about';
 import { SVG } from '@Commons/SVG';
 import { Button } from '@Commons/Button';
 import { Logo } from '../Logo';
 import { Bars3BottomLeftIcon } from '@heroicons/react/24/outline';
 
 type HeaderProps = {
-  setChildren: Dispatch<SetStateAction<ReactElement>>;
+  // setChildren: Dispatch<SetStateAction<ReactElement>>;
   isClicked: boolean;
   onClick: () => void;
 };
 
-export const Header = ({ setChildren, onClick }: HeaderProps) => {
+export const Header = ({ /* setChildren, */ onClick }: HeaderProps) => {
   return (
     <header className='header-wrapper lg:w-[calc(100vw-256px)]'>
       {/* // AT_SEE: https://github.com/zero2hero-jp/secbokapp-front/issues/43 */}

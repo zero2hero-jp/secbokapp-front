@@ -3,6 +3,8 @@ import { ListItem } from './ListItem';
 import { HomeIcon } from '@heroicons/react/24/solid';
 import { Button } from '@Commons/Button';
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/router';
+import path from 'path';
 
 type SideBarProps = {
   isClicked: boolean;
@@ -10,6 +12,11 @@ type SideBarProps = {
 };
 
 export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
+  const router = useRouter();
+
+  const routingPage = () => {
+    router.push({ pathname: '/' });
+  };
   return (
     <>
       {isClicked ? (
@@ -26,7 +33,7 @@ export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
               <Button
                 className='sidebar-home-icon-wrapper-clicked'
                 type='button'
-                /* onClick={homeへ遷移} */
+                onClick={routingPage}
               >
                 <HomeIcon className='icon-8' />
               </Button>
@@ -40,7 +47,11 @@ export const SideBar = ({ isClicked, onClick }: SideBarProps) => {
       ) : (
         <aside className='sidebar'>
           <div className='sidebar-contents'>
-            <Button className='sidebar-home-icon-wrapper' type='button'>
+            <Button
+              className='sidebar-home-icon-wrapper'
+              type='button'
+              onClick={routingPage}
+            >
               <HomeIcon className='icon-8' />
             </Button>
             <p className='sidebar-list-main-title'>Pages</p>

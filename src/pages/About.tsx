@@ -1,11 +1,17 @@
-export const About = () => {
-  return(
+import { Layout } from '@Components/ui/layouts/Layout';
+import { About } from '@Components/ui/pages/About';
+
+const about = () => {
+  return (
     <div>
       {
-// ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/39
-// ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/40
-       }
-      About --
+        // ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/39
+        // ISSUED: https://github.com/zero2hero-jp/secbokapp-front/issues/40
+      }
+      <Layout /* setChildren={setChildren} */>
+        <About />
+      </Layout>
     </div>
-  )
-}
+  );
+};
+export default about;

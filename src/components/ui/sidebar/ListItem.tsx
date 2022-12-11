@@ -1,10 +1,19 @@
 import { SVG } from '@Commons/SVG';
+import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { InboxArrowDownIcon, UserCircleIcon } from '@heroicons/react/24/solid';
+import Link from 'next/link';
 import React from 'react';
+
+const arrowDirection = {
+  down: 'down',
+  right: 'right',
+} as const;
 
 type SidebarIcons = {
   title: string;
   icon: JSX.Element;
+  arrowDirection: keyof typeof arrowDirection;
+  href: string;
 }[];
 
 const size = 'icon-7';
@@ -12,10 +21,20 @@ const sidebarIcons: SidebarIcons = [
   {
     icon: <UserCircleIcon className={size} />,
     title: 'Dashboard',
+    arrowDirection: 'down',
+    href: '',
   },
   {
     icon: <InboxArrowDownIcon className={size} />,
     title: 'Inbox',
+    arrowDirection: 'down',
+    href: '',
+  },
+  {
+    icon: <InboxArrowDownIcon className={size} />,
+    title: 'About',
+    arrowDirection: 'right',
+    href: '/about',
   },
 ];
 type ListITemProps = {
@@ -42,18 +61,23 @@ export const ListItem = ({ isClicked }: ListITemProps) => {
               >
                 {item.icon}
               </li>
-              <li className='sidebar-list-item-text'>{item.title}</li>
+              <li className='sidebar-list-item-text'>
+                {item.arrowDirection === 'right' ? (
+                  <Link href={item.href}>
+                    <a>{item.title}</a>
+                  </Link>
+                ) : (
+                  item.title
+                )}
+              </li>
             </ul>
           </li>
           <li className='sidebar-icon-open-close'>
-            <SVG
-              variant='outline'
-              name='chevron-down'
-              d='M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z'
-              className='icon-3'
-              strokeWidth='2'
-              stroke='currentColor'
-            />
+            {item.arrowDirection === 'down' ? (
+              <ChevronDownIcon className='icon-3 font-bold' />
+            ) : (
+              <ChevronRightIcon className='icon-3 font-bold' />
+            )}
           </li>
           {/* TODO:ここにアコーディオンメニューがはいります */}
         </ul>

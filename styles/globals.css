@@ -33,6 +33,10 @@ li {
   }
 }
 
+.main {
+  @apply px-4 md:px-4 lg:px-8 pt-6;
+}
+
 .icon-3 {
   @apply h-3 w-3;
 }
