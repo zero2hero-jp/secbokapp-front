@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
   // assetPrefix: prefixPath,
-  basePath: "/",
+  basePath: "",
   swcMinify: true,
 }
 
