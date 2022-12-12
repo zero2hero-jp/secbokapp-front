@@ -16,7 +16,7 @@ export const Layout = ({ children /* setChildren */ }: LayoutProps) => {
   return (
     <div className='flex relative md:static'>
       <SideBar isClicked={isClicked} onClick={off} />
-
+      <div className={`${isClicked ? 'sidebar-clicked-bg' : ''}`}></div>
       <div className='flex flex-col'>
         <Header
           /* setChildren={setChildren} */ isClicked={isClicked}

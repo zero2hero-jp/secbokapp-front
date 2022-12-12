@@ -83,7 +83,7 @@ li {
 }
 
 .sidebar {
-  @apply sr-only lg:not-sr-only;
+  @apply sr-only lg:not-sr-only z-30;
 }
 
 .sidebar-contents {
@@ -115,7 +115,11 @@ li {
 }
 
 .sidebar-clicked {
-  @apply not-sr-only absolute z-20 lg:static;
+  @apply not-sr-only absolute z-30 lg:static;
+}
+
+.sidebar-clicked-bg {
+  @apply absolute bg-opacity-20 bg-slate-800 z-20 h-screen w-full;
 }
 
 .sidebar-contents-clicked {
