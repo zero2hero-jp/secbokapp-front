@@ -30,6 +30,12 @@ export const IndexPage = () => {
       paragraph: 'Lorem ipsum',
       btnName: 'Book classic tour now',
     },
+    {
+      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+      badge: 'On Sale',
+      paragraph: 'quia aperiam iure modi aspernatur',
+      btnName: 'Book classic tour now',
+    },
   ];
   const indexCards = () => {
     const newCards = indexCardsData.map((item) => {
@@ -44,7 +50,6 @@ export const IndexPage = () => {
 
     setCards(newCards);
   };
-
   useEffect(() => {
     indexCards();
     // 何かに依存しないで初回から関数走ってほしいため
@@ -56,9 +61,10 @@ export const IndexPage = () => {
       <Box className='announce'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </Box>
-      {cards.map((item) => (
-        <Grid key={item.id}>
-          <Grid.Col span={8}>
+
+      <Grid>
+        {cards.map((item) => (
+          <Grid.Col lg={4} md={4} sm={6} key={item.id}>
             <Card shadow='sm' p='lg' radius='xs' withBorder>
               <Card.Section>{/* <Image alt={} src={} /> */}</Card.Section>
               <Group position='apart' mt='md' mb='xs'>
@@ -81,8 +87,8 @@ export const IndexPage = () => {
               </Button>
             </Card>
           </Grid.Col>
-        </Grid>
-      ))}
+        ))}
+      </Grid>
     </>
   );
 };

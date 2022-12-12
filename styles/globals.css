@@ -1,3 +1,4 @@
+/* Mantineではtailwindcss/base消したほうが良いが、消すとtailwindcssで書いた部分が効かなくなる */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
