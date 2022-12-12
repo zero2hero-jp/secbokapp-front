@@ -9,7 +9,7 @@ type IndexProps = {
   btnName?: string;
 }[];
 
-export const Index = () => {
+export const IndexPage = () => {
   const uuId = () => {
     var uuid = '',
       i,

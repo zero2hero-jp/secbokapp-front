@@ -34,7 +34,7 @@ const sidebarIcons: SidebarIcons = [
     icon: <InboxArrowDownIcon className={size} />,
     title: 'AboutUs',
     arrowDirection: 'right',
-    href: '/aboutus',
+    href: '/about',
   },
 ];
 type ListITemProps = {
