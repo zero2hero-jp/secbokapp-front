@@ -4,7 +4,6 @@ import { HomeIcon } from '@heroicons/react/24/solid';
 import { Button } from '@Commons/Button';
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
-import path from 'path';
 
 type SideBarProps = {
   isClicked: boolean;

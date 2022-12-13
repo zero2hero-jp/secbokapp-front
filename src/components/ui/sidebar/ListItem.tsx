@@ -1,4 +1,3 @@
-import { SVG } from '@Commons/SVG';
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { InboxArrowDownIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import Link from 'next/link';

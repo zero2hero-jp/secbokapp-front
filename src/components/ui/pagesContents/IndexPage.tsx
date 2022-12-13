@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Box, Card, Grid, Text, Badge, Button, Group } from '@mantine/core';
-import { useUuId } from '@Commons/hooks/useUuId';
 
-type CardsProps = {
+export type CardsProps = {
   id: string;
   title?: string;
   badge?: string;
@@ -10,49 +9,16 @@ type CardsProps = {
   btnName?: string;
 };
 
-type indexCardsData = Omit<CardsProps, 'id'>;
+export type indexCardItem = Omit<CardsProps, 'id'>;
 
-export const IndexPage = () => {
-  const [cards, setCards] = useState<CardsProps[]>([]);
-  const { uuId } = useUuId();
+export type IndexPageProps = {
+  createCards: () => void;
+  cards: CardsProps[];
+};
 
-  const indexCardsData: indexCardsData[] = [
-    {
-      title: 'Norway Fjord Adventures',
-      badge: 'On Sale',
-      paragraph:
-        'With Fjord Tours you can explore more of the magical fjord landscapes with tours and activities on and around the fjords of Norway',
-      btnName: 'Book classic tour now',
-    },
-    {
-      title: 'Lorem ipsum',
-      badge: 'On Sale',
-      paragraph: 'Lorem ipsum',
-      btnName: 'Book classic tour now',
-    },
-    {
-      title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
-      badge: 'On Sale',
-      paragraph: 'quia aperiam iure modi aspernatur',
-      btnName: 'Book classic tour now',
-    },
-  ];
-  const indexCards = () => {
-    const newCards = indexCardsData.map((item) => {
-      return {
-        title: item.title,
-        badge: item.badge,
-        paragraph: item.paragraph,
-        btnName: item.btnName,
-        id: uuId(),
-      };
-    });
-
-    setCards(newCards);
-  };
+export const IndexPage = ({ createCards, cards }: IndexPageProps) => {
   useEffect(() => {
-    indexCards();
-    // 何かに依存しないで初回から関数走ってほしいため
+    createCards();
     // eslint-disable-next-line
   }, []);
 

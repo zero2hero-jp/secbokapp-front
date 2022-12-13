@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ReactElement, Dispatch, SetStateAction } from 'react';
 
-import { Index } from '@Components/sheet/Index';
 // import { about } from '@Pages/about';
 import { SVG } from '@Commons/SVG';
 import { Button } from '@Commons/Button';
