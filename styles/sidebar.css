@@ -1,86 +1,6 @@
-/* Mantineではtailwindcss/base消したほうが良いが、消すとtailwindcssで書いた部分が効かなくなる */
-@import 'tailwindcss/base';
+/* @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-li {
-  list-style-type: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-.main {
-  @apply px-4 md:px-4 lg:px-8 pt-6;
-}
-
-.icon-3 {
-  @apply h-3 w-3;
-}
-
-.icon-4 {
-  @apply w-4 h-4;
-}
-
-.icon-5 {
-  @apply w-5 h-5;
-}
-
-.icon-6 {
-  @apply w-6 h-6;
-}
-
-.icon-7 {
-  @apply w-7 h-7;
-}
-
-.icon-8 {
-  @apply w-8 h-8;
-}
-
-.header-wrapper {
-  @apply flex h-16 justify-between lg:justify-end py-4 px-4 shadow-sm shadow-slate-100 w-screen;
-}
-
-.header-menu {
-  @apply flex items-center not-sr-only lg:sr-only;
-}
-
-.header-menu-button {
-  @apply text-slate-500 font-medium;
-}
-
-.header-navigation {
-  @apply flex gap-x-2 items-center;
-}
-
-.header-button {
-  @apply bg-gray-200 rounded-full p-[6px];
-}
+@import 'tailwindcss/utilities'; */
 
 .sidebar {
   @apply sr-only lg:not-sr-only z-30;
@@ -159,8 +79,4 @@ li {
 
 .sidebar-icon-open-close {
   @apply text-slate-400 flex items-center;
-}
-
-.announce {
-  @apply bg-indigo-100 py-4 px-6 text-xl mb-6;
 }

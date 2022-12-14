@@ -31,7 +31,13 @@ export const IndexPage = ({ createCards, cards }: IndexPageProps) => {
       <Grid>
         {cards.map((item) => (
           <Grid.Col lg={4} md={4} sm={6} key={item.id}>
-            <Card shadow='sm' p='lg' radius='xs' withBorder>
+            <Card
+              shadow='sm'
+              p='lg'
+              radius='xs'
+              withBorder
+              className='contents'
+            >
               <Card.Section>{/* <Image alt={} src={} /> */}</Card.Section>
               <Group position='apart' mt='md' mb='xs'>
                 <Text weight={500}>{item.title}</Text>

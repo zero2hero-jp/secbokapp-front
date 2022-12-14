@@ -1,4 +1,6 @@
-import '../../styles/globals.css';
+import '@Styles/common.css';
+import '@Styles/header.css';
+import '@Styles/sidebar.css';
 import type { AppProps } from 'next/app';
 import { MantineProvider } from '@mantine/core';
 
