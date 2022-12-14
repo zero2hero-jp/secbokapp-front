@@ -1,6 +1,6 @@
-/* @import 'tailwindcss/base';
+@import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */
+@import 'tailwindcss/utilities';
 
 .header-wrapper {
   @apply flex h-16 justify-between lg:justify-end py-4 px-4 shadow-sm shadow-slate-100 w-screen;
