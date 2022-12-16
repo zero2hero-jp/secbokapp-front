@@ -15,19 +15,23 @@ type HeaderProps = {
 
 export const Header = ({ /* setChildren, */ onClick }: HeaderProps) => {
   return (
-    <header className='header-wrapper lg:w-[calc(100vw-256px)]'>
+    <header className='flex h-16 justify-between lg:justify-end py-4 px-4 shadow-sm shadow-slate-100 w-screen lg:w-[calc(100vw-256px)]'>
       {/* // AT_SEE: https://github.com/zero2hero-jp/secbokapp-front/issues/43 */}
       {/* TODO: あとで下記の部分を使います */}
       {/* <ul>
         <li><a href="#" onClick={()=>{setChildren(<Index setChildren={setChildren} />)}}>Index</a></li>
         <li><a href="#" onClick={()=>{setChildren(<About />)}}>About</a></li>
       </ul> */}
-      <div className='header-menu'>
-        <Button className='header-menu-button' type='button' onClick={onClick}>
+      <div className='flex items-center not-sr-only lg:sr-only'>
+        <Button
+          className='text-slate-500 font-medium'
+          type='button'
+          onClick={onClick}
+        >
           <Bars3BottomLeftIcon className='icon-6' />
         </Button>
       </div>
-      <div className='header-navigation'>
+      <div className='flex gap-x-2 items-center'>
         <Button className='header-button' type='button'>
           <SVG
             variant='outline'

@@ -34,10 +34,6 @@ li {
   }
 }
 
-.main {
-  @apply px-4 md:px-4 lg:px-8 pt-6;
-}
-
 .icon-3 {
   @apply h-3 w-3;
 }
@@ -64,4 +60,9 @@ li {
 
 .announce {
   @apply bg-indigo-100 py-4 px-6 text-xl mb-6;
+}
+
+/* header-button 繰り返し使うので */
+.header-button {
+  @apply bg-gray-200 rounded-full p-[6px];
 }

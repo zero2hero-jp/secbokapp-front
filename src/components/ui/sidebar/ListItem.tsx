@@ -45,22 +45,24 @@ export const ListItem = ({ isClicked }: ListITemProps) => {
       {sidebarIcons.map((item) => (
         <ul
           className={`${
-            isClicked ? 'sidebar-list-item-clicked' : 'sidebar-list-item'
+            isClicked
+              ? 'w-[200px] flex items-center justify-between'
+              : 'lg:w-[200px] flex items-center justify-between'
           }`}
           key={item.title}
         >
           <li>
-            <ul className='sidebar-list-item-title'>
+            <ul className='flex items-center gap-x-3'>
               <li
                 className={`${
                   item.title === 'Dashboard'
-                    ? 'sidebar-main-icon-wrapper'
-                    : 'sidebar-icon-wrapper'
+                    ? 'flex text-indigo-500'
+                    : 'flex text-slate-400'
                 }`}
               >
                 {item.icon}
               </li>
-              <li className='sidebar-list-item-text'>
+              <li className='text-slate-200 text-sm'>
                 {item.arrowDirection === 'right' ? (
                   <Link href={item.href}>{item.title}</Link>
                 ) : (
@@ -69,7 +71,7 @@ export const ListItem = ({ isClicked }: ListITemProps) => {
               </li>
             </ul>
           </li>
-          <li className='sidebar-icon-open-close'>
+          <li className='text-slate-400 flex items-center'>
             {item.arrowDirection === 'down' ? (
               <ChevronDownIcon className='icon-3 font-bold' />
             ) : (

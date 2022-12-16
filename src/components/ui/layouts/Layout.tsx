@@ -16,13 +16,18 @@ export const Layout = ({ children /* setChildren */ }: LayoutProps) => {
   return (
     <div className='flex relative md:static'>
       <SideBar isClicked={isClicked} onClick={off} />
-      <div className={`${isClicked ? 'sidebar-clicked-bg' : ''}`}></div>
+      <div
+        className={`${
+          isClicked &&
+          'absolute bg-opacity-20 bg-slate-800 z-20 h-screen w-full'
+        }`}
+      ></div>
       <div className='flex flex-col'>
         <Header
           /* setChildren={setChildren} */ isClicked={isClicked}
           onClick={on}
         />
-        <main className='main'>{children}</main>
+        <main className='px-4 md:px-4 lg:px-8 pt-6'>{children}</main>
         <Footer />
       </div>
     </div>
