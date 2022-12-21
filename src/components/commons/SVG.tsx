@@ -1,24 +1,47 @@
 import React from 'react';
-type SVGProps = {
-  d: string;
-  strokeWidth: string;
-  stroke: string;
-  className: string;
-};
 
-export const SVG = ({ d, strokeWidth, stroke, className }: SVGProps) => {
+type SVGProps =
+  | {
+      variant: 'solid';
+      dWithRule: string /* fillRuleがある方のpathのd */;
+      d?: string /* fillRuleがない方のpathのd */;
+      className: string;
+      name: string /* 他のアイコンと区別するための名前 */;
+    }
+  | {
+      variant: 'outline';
+      d: string;
+      strokeWidth: string;
+      stroke: string;
+      className: string;
+      name: string /* 他のアイコンと区別するための名前 */;
+    };
+
+export const SVG = (props: SVGProps) => {
   return (
     <>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        fill='none'
-        viewBox='0 0 24 24'
-        strokeWidth={strokeWidth}
-        stroke={stroke}
-        className={className}
-      >
-        <path strokeLinecap='round' strokeLinejoin='round' d={d} />
-      </svg>
+      {props.variant === 'solid' ? (
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 24 24'
+          fill='currentColor'
+          className={props.className}
+        >
+          <path d={props.d} />
+          <path fillRule='evenodd' d={props.dWithRule} clipRule='evenodd' />
+        </svg>
+      ) : (
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={props.strokeWidth}
+          stroke={props.stroke}
+          className={props.className}
+        >
+          <path strokeLinecap='round' strokeLinejoin='round' d={props.d} />
+        </svg>
+      )}
     </>
   );
 };

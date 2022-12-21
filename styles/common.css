@@ -1,3 +1,4 @@
+/* Mantineではtailwindcss/base消したほうが良いが、消すとtailwindcssで書いた部分が効かなくなる */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -33,22 +34,35 @@ li {
   }
 }
 
-.header-wrapper {
-  @apply flex h-16 w-full justify-end py-4 px-6;
+.icon-3 {
+  @apply h-3 w-3;
 }
 
-.header-contents {
-  @apply flex gap-x-3 items-center;
-}
-
-.header-button {
-  @apply bg-gray-200 rounded-full p-[6px];
-}
-
-.header-icon {
+.icon-4 {
   @apply w-4 h-4;
 }
 
-.icon-s {
-  @apply h-3 w-3;
+.icon-5 {
+  @apply w-5 h-5;
+}
+
+.icon-6 {
+  @apply w-6 h-6;
+}
+
+.icon-7 {
+  @apply w-7 h-7;
+}
+
+.icon-8 {
+  @apply w-8 h-8;
+}
+
+.announce {
+  @apply bg-indigo-100 py-4 px-6 text-xl mb-6;
+}
+
+/* header-button 繰り返し使うので */
+.header-button {
+  @apply bg-gray-200 rounded-full p-[6px];
 }
